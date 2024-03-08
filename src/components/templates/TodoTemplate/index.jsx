@@ -4,6 +4,7 @@ import { useTodos } from '../../../context/TodoContext'; // ContextからuseTodo
 import { InputForm } from '../../atoms/inputForm';
 import { AddTodo } from '../../organisms/AddTodo';
 import { TodoList } from '../../organisms/TodoList';
+import { Link } from 'react-router-dom'; 
 import styles from "./styles.module.css";
 
 export const TodoTemplate = () => {
@@ -31,6 +32,8 @@ export const TodoTemplate = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Todo List</h1>
+      {/* 新規登録ページへのリンク（Createボタン） */}
+      <Link to="/create">Create New Todo</Link>
       
       {/* AddTodo */}
       <section className={styles.common}>
